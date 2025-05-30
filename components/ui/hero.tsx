@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 interface HeroProps {
-  title: string;
-  subtitle?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
   ctaText?: string;
   ctaLink?: string;
   imageUrl?: string;
@@ -58,7 +58,7 @@ export function Hero({
         ></div>
       </div>
 
-      <div 
+      <div
         className={cn(
           "relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center",
           "transition-all duration-500 ease-in-out transform",
@@ -74,9 +74,9 @@ export function Hero({
           </p>
         )}
         {ctaText && (
-          <Button 
+          <Button
             asChild
-            size="lg" 
+            size="lg"
             className="bg-[#aad6ec] text-[#113065] hover:bg-[#113065] hover:text-white transition-colors rounded-2xl text-lg px-8 py-6 font-medium"
           >
             <Link href={ctaLink}>
