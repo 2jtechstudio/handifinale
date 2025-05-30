@@ -45,10 +45,20 @@ export default function AboutPage() {
             <span className={`font-bold text-xl ${scrolled ? "text-white" : "text-[#113065]"}`}>H & I Construction</span>
           </Link>
           <div className="flex items-center space-x-6">
+            {/* Always show all nav links, regardless of scroll */}
             <Link href="/about" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>About</Link>
             <Link href="/services" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Services</Link>
             <Link href="/projects" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Projects</Link>
             <Link href="/contact" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Contact</Link>
+            <Link href="/contact">
+              <button className={`ml-4 px-4 py-2 rounded-xl text-lg font-semibold transition-colors ${
+                scrolled
+                  ? "bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065]"
+                  : "bg-[#113065] text-white hover:bg-[#aad6ec] hover:text-[#113065]"
+              }`}>
+                Get Your Free Estimate
+              </button>
+            </Link>
           </div>
         </nav>
       </header>
