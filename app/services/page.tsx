@@ -33,6 +33,28 @@ const imageMap: Record<string, string> = {
   "Utility Installation": "/images/utility1.png",
 };
 
+// Ensure "Construction" is included in SERVICES
+const SERVICES_WITH_CONSTRUCTION = SERVICES.some(s => s.title === "Construction")
+  ? SERVICES
+  : [
+      ...SERVICES,
+      {
+        id: "construction",
+        title: "Construction",
+        description: "Expert construction services for residential and commercial projects.",
+        shortDesc: "Expert construction services for residential and commercial projects.",
+        benefits: [
+          "Comprehensive project management",
+          "Experienced construction team",
+          "Quality materials and workmanship",
+        ],
+      },
+    ];
+
+// Split into two rows: first 5, then the rest
+const firstRow = SERVICES_WITH_CONSTRUCTION.slice(0, 5);
+const secondRow = SERVICES_WITH_CONSTRUCTION.slice(5);
+
 export default function ServicesPage() {
   return (
     <>
@@ -40,7 +62,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Construction Services
+              OUR CONSTRUCTION SERVICES
             </h1>
             <p className="text-xl text-gray-200">
               Comprehensive construction solutions for all your project needs. From initial excavation to final concrete work, we handle it all with expertise and care.
@@ -51,21 +73,34 @@ export default function ServicesPage() {
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {SERVICES.map((service, index) => (
-              <a
-                key={service.id}
-                href={`#${service.id}`}
-                className="inline-flex items-center justify-center px-4 py-2 bg-white rounded-xl shadow-sm border border-gray-200 text-gray-800 hover:bg-[#aad6ec] hover:text-[#113065] transition-colors"
-              >
-                {service.title}
-              </a>
-            ))}
+          <div className="flex flex-col gap-4 items-center">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {firstRow.map((service) => (
+                <a
+                  key={service.id}
+                  href={`#${service.id}`}
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white rounded-xl shadow-sm border border-gray-200 text-gray-800 hover:bg-[#aad6ec] hover:text-[#113065] transition-colors"
+                >
+                  {service.title}
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              {secondRow.map((service) => (
+                <a
+                  key={service.id}
+                  href={`#${service.id}`}
+                  className="inline-flex items-center justify-center px-4 py-2 bg-white rounded-xl shadow-sm border border-gray-200 text-gray-800 hover:bg-[#aad6ec] hover:text-[#113065] transition-colors"
+                >
+                  {service.title}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {SERVICES.map((service, index) => (
+      {SERVICES_WITH_CONSTRUCTION.map((service, index) => (
         <Fragment key={service.id}>
           <ServiceDetail
             id={service.id}
@@ -79,7 +114,7 @@ export default function ServicesPage() {
             reversed={index % 2 !== 0}
             className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
           />
-          {index < SERVICES.length - 1 && (
+          {index < SERVICES_WITH_CONSTRUCTION.length - 1 && (
             <div className="container mx-auto px-4">
               <Separator />
             </div>
