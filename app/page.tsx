@@ -1,12 +1,26 @@
 import { Hero } from "@/components/ui/hero";
 import { ServiceCard } from "@/components/ui/service-card";
-import { COMPANY_TAGLINE, SERVICES } from "@/lib/constants";
+import { COMPANY_TAGLINE, SERVICES as ORIGINAL_SERVICES } from "@/lib/constants";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
+  // Add "Construction" service tile if not already present
+  const SERVICES = [
+    ...ORIGINAL_SERVICES,
+    // Only add if not already present
+    ...(!ORIGINAL_SERVICES.some(s => s.title === "Construction")
+      ? [{
+          id: "construction",
+          title: "Construction",
+          shortDesc: "Expert construction services for residential and commercial projects.",
+          image: "/images/construction1.png"
+        }]
+      : [])
+  ];
+
   return (
     <>
       <Hero
@@ -30,7 +44,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {SERVICES.map((service) => {
-              // Map service titles to image filenames (all png)
               const imageMap: Record<string, string> = {
                 "Concrete": "/images/concrete1.png",
                 "Construction": "/images/construction1.png",
