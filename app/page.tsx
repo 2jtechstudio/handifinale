@@ -26,11 +26,14 @@ export default function Home() {
     "Landclearing": "/images/landclearing1.png",
     "Land Clearing / Grading": "/images/landclearing1.png",
     "Land Clearing": "/images/landclearing1.png",
+    "Land Clearing & Grading": "/images/landclearing1.png",
     "Demolition": "/images/demolition1.png",
     "Septic Sewer": "/images/septic1.png",
     "Septic/Sewer": "/images/septic1.png",
+    "Septic & Sewer": "/images/septic1.png",
     "Rock and Sand Delivery": "/images/rock1.png",
     "Rock/Sand Delivery": "/images/rock1.png",
+    "Rock & Sand Delivery": "/images/rock1.png",
     "Utility Installation": "/images/utility1.png",
   };
 
@@ -60,7 +63,13 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => {
-              const imageSrc = imageMap[service.title] || "/images/default.png";
+              // Try to match image by title, fallback to .png if .jpeg was used before
+              let imageSrc = imageMap[service.title];
+              if (!imageSrc) {
+                // fallback: try lowercased, spaces removed, .png
+                const fallback = `/images/${service.title.toLowerCase().replace(/[\s/&]+/g, "")}1.png`;
+                imageSrc = fallback;
+              }
               return (
                 <Link
                   key={service.id}
