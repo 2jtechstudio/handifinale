@@ -10,6 +10,29 @@ export const metadata = constructMetadata({
   path: "services",
 });
 
+// Map service titles to images (same as homepage)
+const imageMap: Record<string, string> = {
+  "Concrete": "/images/concrete1.png",
+  "Construction": "/images/construction1.png",
+  "Excavation": "/images/excavation1.png",
+  "Foundation": "/images/foundation1.png",
+  "Foundation Work": "/images/foundation1.png",
+  "Landclearing": "/images/landclearing1.png",
+  "Land Clearing / Grading": "/images/landclearing1.png",
+  "Land Clearing": "/images/landclearing1.png",
+  "Land Clearing & Grading": "/images/landclearing1.png",
+  "Demolition": "/images/demolition1.png",
+  "demolition": "/images/demolition1.png",
+  "Septic Sewer": "/images/septic1.png",
+  "Septic/Sewer": "/images/septic1.png",
+  "Septic & Sewer": "/images/septic1.png",
+  "Rock and Sand Delivery": "/images/rockandsanddelivery1.png",
+  "Rock/Sand Delivery": "/images/rockandsanddelivery1.png",
+  "Rock & Sand Delivery": "/images/rockandsanddelivery1.png",
+  "rock and sand delivery": "/images/rockandsanddelivery1.png",
+  "Utility Installation": "/images/utility1.png",
+};
+
 export default function ServicesPage() {
   return (
     <>
@@ -49,7 +72,10 @@ export default function ServicesPage() {
             title={service.title}
             description={service.description}
             benefits={service.benefits}
-            image={service.image}
+            image={
+              imageMap[service.title] ||
+              `/images/${service.title.toLowerCase().replace(/[\s/&]+/g, "")}1.png`
+            }
             reversed={index % 2 !== 0}
             className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
           />
