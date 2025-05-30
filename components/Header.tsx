@@ -41,17 +41,28 @@ export default function AboutPage() {
       >
         <nav className="container mx-auto flex items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="H & I Construction Logo" width={40} height={40} />
-            <span className={`font-bold text-xl ${scrolled ? "text-white" : "text-[#113065]"}`}>H & I Construction</span>
+            <Image src="/images/handilogo.webp" alt="H & I Construction Logo" width={40} height={40} />
+            <span className={`font-bold text-xl transition-colors duration-300 ${scrolled ? "text-white" : "text-[#113065]"}`}>H & I Construction</span>
           </Link>
           <div className="flex items-center space-x-6">
-            {/* Always show all nav links, regardless of scroll */}
-            <Link href="/about" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>About</Link>
-            <Link href="/services" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Services</Link>
-            <Link href="/projects" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Projects</Link>
-            <Link href="/contact" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Contact</Link>
+            {/* Always render all nav links, never conditionally hide */}
+            <Link href="/about" className={`transition-colors duration-300 ${scrolled ? "text-white hover:text-[#aad6ec]" : "text-[#113065] hover:text-[#113065]/70"}`}>About</Link>
+            <Link href="/services" className={`transition-colors duration-300 ${scrolled ? "text-white hover:text-[#aad6ec]" : "text-[#113065] hover:text-[#113065]/70"}`}>Services</Link>
+            <Link href="/projects" className={`transition-colors duration-300 ${scrolled ? "text-white hover:text-[#aad6ec]" : "text-[#113065] hover:text-[#113065]/70"}`}>Projects</Link>
+            <Link href="/contact" className={`transition-colors duration-300 ${scrolled ? "text-white hover:text-[#aad6ec]" : "text-[#113065] hover:text-[#113065]/70"}`}>Contact</Link>
+            {/* Add phone number */}
+            <a
+              href="tel:5095911632"
+              className={`transition-colors duration-300 font-semibold ${
+                scrolled
+                  ? "text-white hover:text-[#aad6ec]"
+                  : "text-[#113065] hover:text-[#113065]/70"
+              }`}
+            >
+              (509) 591-1632
+            </a>
             <Link href="/contact">
-              <button className={`ml-4 px-4 py-2 rounded-xl text-lg font-semibold transition-colors ${
+              <button className={`ml-4 px-4 py-2 rounded-xl text-lg font-semibold transition-colors duration-300 ${
                 scrolled
                   ? "bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065]"
                   : "bg-[#113065] text-white hover:bg-[#aad6ec] hover:text-[#113065]"

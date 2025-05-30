@@ -24,11 +24,17 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Local Tri-Cities Construction Experts"
+        title={
+          <span className="block font-extrabold text-[2.5rem] md:text-[5rem] leading-tight">
+            H&amp;I CONSTRUCTION LLC
+          </span>
+        }
         subtitle="Providing professional construction services for residential and commercial projects throughout Eastern Washington."
         ctaText="Get Your Free Estimate"
         ctaLink="/contact"
         imageUrl="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGNvbnN0cnVjdGlvbiUyMHNpdGUlMjBhcmllbCUyMHZpZXd8ZW58MHx8MHx8fDA%3D"
+        // Optionally, if your Hero component supports a className or style prop for centering:
+        // className="flex flex-col items-center justify-center text-center"
       />
 
       <section className="py-16 md:py-24 bg-gray-50">
