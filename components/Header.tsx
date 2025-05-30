@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { constructMetadata } from "@/lib/metadata";
@@ -19,19 +20,35 @@ export const metadata = constructMetadata({
 });
 
 export default function AboutPage() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
-      <header className="sticky top-0 z-50 bg-[#113065] shadow-md">
+      <header
+        className={`sticky top-0 z-50 transition-colors duration-300 ${
+          scrolled
+            ? "bg-[#113065] shadow-md"
+            : "bg-white/90 backdrop-blur-sm shadow"
+        }`}
+      >
         <nav className="container mx-auto flex items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/logo.png" alt="H & I Construction Logo" width={40} height={40} />
-            <span className="text-white font-bold text-xl">H & I Construction</span>
+            <span className={`font-bold text-xl ${scrolled ? "text-white" : "text-[#113065]"}`}>H & I Construction</span>
           </Link>
           <div className="flex items-center space-x-6">
-            <Link href="/about" className="text-white hover:text-[#aad6ec] transition-colors">About</Link>
-            <Link href="/services" className="text-white hover:text-[#aad6ec] transition-colors">Services</Link>
-            <Link href="/projects" className="text-white hover:text-[#aad6ec] transition-colors">Projects</Link>
-            <Link href="/contact" className="text-white hover:text-[#aad6ec] transition-colors">Contact</Link>
+            <Link href="/about" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>About</Link>
+            <Link href="/services" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Services</Link>
+            <Link href="/projects" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Projects</Link>
+            <Link href="/contact" className={scrolled ? "text-white hover:text-[#aad6ec] transition-colors" : "text-[#113065] hover:text-[#113065]/70 transition-colors"}>Contact</Link>
           </div>
         </nav>
       </header>
