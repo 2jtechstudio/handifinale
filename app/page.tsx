@@ -29,31 +29,45 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {SERVICES.map((service) => (
-              <Link
-                key={service.id}
-                href={`/services#${service.id}`}
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <div className="aspect-[4/3] relative">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-200 text-sm line-clamp-2">
-                    {service.shortDesc}
-                  </p>
-                </div>
-              </Link>
-            ))}
+            {SERVICES.map((service) => {
+              // Map service titles to image filenames
+              const imageMap: Record<string, string> = {
+                "Concrete": "/images/concrete1.png",
+                "Construction": "/images/construction1.jpeg",
+                "Excavation": "/images/excavation1.png",
+                "Foundation": "/images/foundation1.jpeg",
+                "Landclearing": "/images/landclearing1.jpeg",
+                "Rock and Sand Delivery": "/images/rock1.jpeg",
+                "Septic Sewer": "/images/septic1.jpeg",
+                "Utility Installation": "/images/utility1.png",
+              };
+              const imageSrc = imageMap[service.title] || "/images/default.jpg";
+              return (
+                <Link
+                  key={service.id}
+                  href={`/services#${service.id}`}
+                  className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src={imageSrc}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm line-clamp-2">
+                      {service.shortDesc}
+                    </p>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
           
           <div className="text-center mt-12">
@@ -144,8 +158,8 @@ export default function Home() {
             
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
               <img 
-                src="https://i.ibb.co/21bCQnnb/worker.jpg" 
-                alt="Construction site" 
+                src="/myphoto.jpg"
+                alt="Your custom image"
                 className="w-full h-full object-cover"
               />
             </div>
