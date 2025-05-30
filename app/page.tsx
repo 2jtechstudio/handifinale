@@ -30,18 +30,18 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {SERVICES.map((service) => {
-              // Map service titles to image filenames
+              // Map service titles to image filenames (all png)
               const imageMap: Record<string, string> = {
                 "Concrete": "/images/concrete1.png",
-                "Construction": "/images/construction1.jpeg",
+                "Construction": "/images/construction1.png",
                 "Excavation": "/images/excavation1.png",
-                "Foundation": "/images/foundation1.jpeg",
-                "Landclearing": "/images/landclearing1.jpeg",
-                "Rock and Sand Delivery": "/images/rock1.jpeg",
-                "Septic Sewer": "/images/septic1.jpeg",
+                "Foundation": "/images/foundation1.png",
+                "Landclearing": "/images/landclearing1.png",
+                "Rock and Sand Delivery": "/images/rock1.png",
+                "Septic Sewer": "/images/septic1.png",
                 "Utility Installation": "/images/utility1.png",
               };
-              const imageSrc = imageMap[service.title] || "/images/default.jpg";
+              const imageSrc = imageMap[service.title] || "/images/default.png";
               return (
                 <Link
                   key={service.id}
