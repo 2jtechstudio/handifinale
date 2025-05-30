@@ -175,8 +175,8 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
               <img 
-                src="/myphoto.jpg"
-                alt="Your custom image"
+                src="/whychooseus.jpeg"
+                alt="WHy choose us image"
                 className="w-full h-full object-cover"
               />
             </div>
