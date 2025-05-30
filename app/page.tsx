@@ -1,25 +1,38 @@
 import { Hero } from "@/components/ui/hero";
-import { ServiceCard } from "@/components/ui/service-card";
-import { COMPANY_TAGLINE, SERVICES as ORIGINAL_SERVICES } from "@/lib/constants";
+import { SERVICES as ORIGINAL_SERVICES } from "@/lib/constants";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
-  // Add "Construction" service tile if not already present
   const SERVICES = [
     ...ORIGINAL_SERVICES,
-    // Only add if not already present
     ...(!ORIGINAL_SERVICES.some(s => s.title === "Construction")
       ? [{
           id: "construction",
           title: "Construction",
           shortDesc: "Expert construction services for residential and commercial projects.",
-          image: "/images/construction1.png"
         }]
       : [])
   ];
+
+  const imageMap: Record<string, string> = {
+    "Concrete": "/images/concrete1.png",
+    "Construction": "/images/construction1.png",
+    "Excavation": "/images/excavation1.png",
+    "Foundation": "/images/foundation1.png",
+    "Foundation Work": "/images/foundation1.png",
+    "Landclearing": "/images/landclearing1.png",
+    "Land Clearing / Grading": "/images/landclearing1.png",
+    "Land Clearing": "/images/landclearing1.png",
+    "Demolition": "/images/demolition1.png",
+    "Septic Sewer": "/images/septic1.png",
+    "Septic/Sewer": "/images/septic1.png",
+    "Rock and Sand Delivery": "/images/rock1.png",
+    "Rock/Sand Delivery": "/images/rock1.png",
+    "Utility Installation": "/images/utility1.png",
+  };
 
   return (
     <>
@@ -33,8 +46,6 @@ export default function Home() {
         ctaText="Get Your Free Estimate"
         ctaLink="/contact"
         imageUrl="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGNvbnN0cnVjdGlvbiUyMHNpdGUlMjBhcmllbCUyMHZpZXd8ZW58MHx8MHx8fDA%3D"
-        // Optionally, if your Hero component supports a className or style prop for centering:
-        // className="flex flex-col items-center justify-center text-center"
       />
 
       <section className="py-16 md:py-24 bg-gray-50">
@@ -47,19 +58,8 @@ export default function Home() {
               From excavation to foundation work, we provide comprehensive construction services to meet all your project needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {SERVICES.map((service) => {
-              const imageMap: Record<string, string> = {
-                "Concrete": "/images/concrete1.png",
-                "Construction": "/images/construction1.png",
-                "Excavation": "/images/excavation1.png",
-                "Foundation": "/images/foundation1.png",
-                "Landclearing": "/images/landclearing1.png",
-                "Rock and Sand Delivery": "/images/rock1.png",
-                "Septic Sewer": "/images/septic1.png",
-                "Utility Installation": "/images/utility1.png",
-              };
               const imageSrc = imageMap[service.title] || "/images/default.png";
               return (
                 <Link
@@ -88,12 +88,8 @@ export default function Home() {
               );
             })}
           </div>
-          
           <div className="text-center mt-12">
-            <Button 
-              asChild
-              className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl"
-            >
+            <Button asChild className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl">
               <Link href="/services">
                 View All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -112,11 +108,7 @@ export default function Home() {
             <p className="text-xl mb-8">
               With years of experience and a commitment to quality, we're the trusted choice for construction projects throughout the Tri-Cities area.
             </p>
-            <Button 
-              asChild
-              size="lg"
-              className="bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065] rounded-xl text-lg"
-            >
+            <Button asChild size="lg" className="bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065] rounded-xl text-lg">
               <Link href="/contact">
                 Get Your Free Estimate
               </Link>
@@ -142,7 +134,6 @@ export default function Home() {
                     <p className="text-gray-600">Our team brings years of construction experience to every project we undertake.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#aad6ec] flex items-center justify-center mr-4">
                     <span className="text-[#113065] font-bold">2</span>
@@ -152,7 +143,6 @@ export default function Home() {
                     <p className="text-gray-600">We pride ourselves on delivering high-quality results that stand the test of time.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#aad6ec] flex items-center justify-center mr-4">
                     <span className="text-[#113065] font-bold">3</span>
@@ -162,7 +152,6 @@ export default function Home() {
                     <p className="text-gray-600">Count on us to complete your project on time and within budget.</p>
                   </div>
                 </div>
-                
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#aad6ec] flex items-center justify-center mr-4">
                     <span className="text-[#113065] font-bold">4</span>
@@ -174,7 +163,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
               <img 
                 src="/myphoto.jpg"
