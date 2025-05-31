@@ -191,7 +191,7 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
               <Image
-                src="/whychooseus.jpeg"
+                src="/whychooseus.jpeg" // Change to .jpg or .png if that's the actual file
                 alt="Why choose us image"
                 fill
                 className="w-full h-full object-cover"

@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="w-full flex items-center justify-between py-4 px-6 bg-white shadow">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/images/handilogo.png"
+          src="/images/handilogo.png" // Change to .jpg or .jpeg if that's the actual file
           alt="H&I Construction Logo"
           width={48}
           height={48}
