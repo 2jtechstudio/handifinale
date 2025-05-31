@@ -112,7 +112,7 @@ export default function ServicesPage() {
               `/images/${service.title.toLowerCase().replace(/[\s/&]+/g, "")}1.png`
             }
             reversed={false}
-            className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+            className="bg-white"
           />
           {index < SERVICES_WITH_CONSTRUCTION.length - 1 && (
             <div className="container mx-auto px-4">

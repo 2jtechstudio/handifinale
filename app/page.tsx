@@ -41,17 +41,42 @@ export default function Home() {
 
   return (
     <>
-      <Hero
-        title={
-          <span className="block font-extrabold text-[2.5rem] md:text-[5rem] leading-tight">
-            H&amp;I CONSTRUCTION LLC
-          </span>
-        }
-        subtitle="Providing professional construction services for residential and commercial projects throughout Eastern Washington."
-        ctaText="Get Your Free Estimate"
-        ctaLink="/contact"
-        imageUrl="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGNvbnN0cnVjdGlvbiUyMHNpdGUlMjBhcmllbCUyMHZpZXd8ZW58MHx8MHx8fDA%3D"
-      />
+      {/* --- Enhanced Hero Section --- */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-[#0f1a2c] overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=1600&auto=format&fit=crop&q=80"
+          alt="Construction site aerial view"
+          fill
+          className="object-cover object-center z-0"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/40 z-10" />
+        <div className="relative z-20 w-full flex justify-center">
+          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm">
+              H&amp;I CONSTRUCTION LLC
+            </h1>
+            <p className="text-lg md:text-2xl text-gray-700 text-center mb-8 font-medium">
+              Providing professional construction services for residential and commercial projects throughout Eastern Washington.
+            </p>
+            <Button asChild size="lg" className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-md transition">
+              <Link href="/contact">
+                Get Your Free Estimate
+              </Link>
+            </Button>
+          </div>
+        </div>
+        <style jsx global>{`
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+          }
+          .animate-fade-in {
+            animation: fade-in 1s cubic-bezier(0.4,0,0.2,1) both;
+          }
+        `}</style>
+      </section>
+      {/* --- End Enhanced Hero Section --- */}
 
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -174,10 +199,13 @@ export default function Home() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
-              <img 
+              <Image
                 src="/whychooseus.jpeg"
-                alt="WHy choose us image"
+                alt="Why choose us image"
+                fill
                 className="w-full h-full object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
             </div>
           </div>
