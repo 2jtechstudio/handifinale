@@ -44,12 +44,13 @@ export default function Home() {
       {/* --- Enhanced Hero Section --- */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-[#0f1a2c] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=1600&auto=format&fit=crop&q=80"
+          src="/images/header.png"
           alt="Construction site aerial view"
           fill
           className="object-cover object-center z-0"
           priority
         />
+        {/* Navy overlay for better UX */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/40 z-10" />
         <div className="relative z-20 w-full flex justify-center">
           <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in">
@@ -73,7 +74,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Construction Services
+              OUR CONSTRUCTION SERVICES
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               From excavation to foundation work, we provide comprehensive construction services to meet all your project needs.
