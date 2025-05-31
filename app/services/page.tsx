@@ -111,7 +111,7 @@ export default function ServicesPage() {
               imageMap[service.title] ||
               `/images/${service.title.toLowerCase().replace(/[\s/&]+/g, "")}1.png`
             }
-            reversed={index % 2 !== 0}
+            reversed={false}
             className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
           />
           {index < SERVICES_WITH_CONSTRUCTION.length - 1 && (
