@@ -1,3 +1,8 @@
+<!-- 
+This file is not valid TSX and is causing build errors.
+Please remove this file or rename it to CodeCitations.md and move it to a docs or non-components directory.
+-->
+
 # Code Citations
 
 ## License: unknown
