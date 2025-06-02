@@ -1,0 +1,42 @@
+# Code Citations
+
+## License: LGPL_3_0
+https://github.com/bigbluebutton/bigbluebutton/tree/16f6d7686310dd5024bc6c3a382f1c51d566c9b3/bbb-learning-dashboard/src/components/UserAvatar.jsx
+
+```
+948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1
+```
+
+
+## License: MIT
+https://github.com/dreamyguy/gitinsight/tree/e195b7035fac141eb18b27fd8455f634cb71ef25/frontend/src/components/primitives/Icon/Phone.js
+
+```
+round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11
+```
+
+
+## License: unknown
+https://github.com/mdarco/T-Office/tree/4d1ddcc2afece019e2e84f599436e9100bb7b9b6/toffice.webapp-react/src/components/Clients/Clients.js
+
+```
+"0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0
+```
+
+
+## License: unknown
+https://github.com/PhuongPham1203/webchat/tree/010db1e90fa0c3257d1c6c3f9dc9b0336e8956c1/chat-client/src/ui_source/ltr/app/light-skin/chat-1.html
+
+```
+5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1
+```
+
+
+## License: unknown
+https://github.com/heartsantor/softlix/tree/949c306bdd9371dfb6ef0f9e5f18ba3265927d50/src/blocks/pageLayouts/WithNarrowLayoutAndNoSidebar/components/Topbar/Topbar.js
+
+```
+"currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-
+```
