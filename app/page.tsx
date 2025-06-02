@@ -61,13 +61,13 @@ export default function Home() {
           >
             H&amp;I CONSTRUCTION LLC
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-white mb-10 drop-shadow opacity-0 translate-y-8 animate-hero-fade-in delay-150">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-white mb-8 mt-6 drop-shadow opacity-0 translate-y-8 animate-hero-fade-in delay-150">
             Providing professional construction services for residential and commercial projects throughout Eastern Washington.
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-5 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 opacity-0 translate-y-8 animate-hero-fade-in delay-300"
+            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-6 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 mt-8 opacity-0 translate-y-8 animate-hero-fade-in delay-300"
           >
             <Link href="/contact">
               Get Your Free Estimate
