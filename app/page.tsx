@@ -55,23 +55,40 @@ export default function Home() {
         {/* Navy overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/30 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full px-4">
-          <h1 className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-lg mb-0">
-            H&amp;I CONSTRUCTION LLC
-          </h1>
-          <p className="max-w-md sm:max-w-lg md:max-w-xl text-2xl sm:text-3xl md:text-4xl font-medium text-white mt-6 mb-0 drop-shadow">
-            Providing professional construction services for residential and commercial projects throughout Eastern Washington.
-          </p>
-          <div className="flex-1 flex flex-col justify-end w-full">
-            <div className="flex justify-center w-full">
-              <Button
-                asChild
-                size="lg"
-                className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-8 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 mt-12"
-              >
-                <Link href="/contact">
-                  Get Your Free Estimate
-                </Link>
-              </Button>
+          <div className="flex flex-col items-center justify-center h-full w-full"
+            style={{ height: "100%" }}>
+            <div className="flex flex-col items-center justify-center h-full w-full"
+              style={{ height: "100%" }}>
+              <div className="flex flex-col items-center justify-center h-full w-full"
+                style={{ height: "100%" }}>
+                <div className="flex flex-col items-center justify-center h-full w-full gap-12"
+                  style={{ height: "100%" }}>
+                  <h1 className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-lg"
+                    style={{ letterSpacing: "0.04em" }}>
+                    H&amp;I CONSTRUCTION LLC
+                  </h1>
+                  <p
+                    className="font-medium text-white text-2xl sm:text-3xl md:text-4xl drop-shadow"
+                    style={{
+                      width: "90%",
+                      maxWidth: "90%",
+                      marginLeft: "auto",
+                      marginRight: "auto"
+                    }}
+                  >
+                    Providing professional construction services for residential and commercial projects throughout Eastern Washington.
+                  </p>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-8 text-xl shadow-lg transition-all duration-200 mt-0 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 hover:ring-4 hover:ring-[#aad6ec] hover:ring-opacity-50"
+                  >
+                    <Link href="/contact">
+                      Get Your Free Estimate
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
