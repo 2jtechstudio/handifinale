@@ -211,15 +211,48 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
-              <Image
-                src="/images/whychooseus.png"
-                alt="Why choose us image"
-                fill
-                className="w-full h-full object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+            {/* 2x2 image grid */}
+            <div className="grid grid-cols-2 grid-rows-2 gap-2 h-96">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/photo1.png"
+                  alt="Project photo 1"
+                  fill
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  priority
+                />
+              </div>
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/photo2.png"
+                  alt="Project photo 2"
+                  fill
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  priority
+                />
+              </div>
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/photo3.png"
+                  alt="Project photo 3"
+                  fill
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  priority
+                />
+              </div>
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/photo4.png"
+                  alt="Project photo 4"
+                  fill
+                  className="object-cover rounded-xl"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>

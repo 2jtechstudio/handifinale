@@ -42,7 +42,7 @@ export default function AboutPage() {
                   rel="noreferrer"
                   className="inline-flex items-center px-4 py-2 bg-[#113065] text-white rounded-lg hover:bg-[#0f1056] transition-colors"
                 >
-                  <span>@handiconstructionllc</span>
+                  <span>Instagram</span>
                 </a>
                 <a 
                   href={COMPANY_FACEBOOK}

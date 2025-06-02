@@ -49,8 +49,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
                     <p className="text-gray-700">
-                      <a href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`} className="hover:text-[#113065]">
-                        {COMPANY_PHONE}
+                      <a href="tel:5095911632" className="hover:text-[#113065]">
+                        (509) 591-1632
                       </a>
                     </p>
                   </div>
@@ -65,8 +65,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-700">
-                      <a href={`mailto:${COMPANY_EMAIL}`} className="hover:text-[#113065]">
-                        {COMPANY_EMAIL}
+                      <a href="mailto:H.I.Construction2016@gmail.com" className="hover:text-[#113065]">
+                        H.I.Construction2016@gmail.com
                       </a>
                     </p>
                   </div>
@@ -80,9 +80,9 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Address</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">Location</h3>
                     <p className="text-gray-700">
-                      {COMPANY_ADDRESS}
+                      Serving the Tri-Cities & surrounding areas
                     </p>
                   </div>
                 </div>
