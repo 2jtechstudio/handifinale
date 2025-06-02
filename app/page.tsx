@@ -43,8 +43,8 @@ export default function Home() {
 
   return (
     <>
-      {/* --- Enhanced Hero Section --- */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-white overflow-hidden pt-0 mt-0">
+      {/* --- Refactored Hero Section --- */}
+      <section className="relative h-[90vh] min-h-[500px] bg-cover bg-center flex items-center justify-center text-white text-center overflow-hidden">
         <Image
           src="/images/header.png"
           alt="Construction site aerial view"
@@ -52,61 +52,27 @@ export default function Home() {
           className="object-cover object-center z-0"
           priority
         />
-        {/* Subtle navy overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/60 via-[#113065]/30 to-[#113065]/10 z-10 pointer-events-none" />
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div
-            className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center border border-gray-100
-              animate-fade-in-up"
+        {/* Navy overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/30 z-10" />
+        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg text-white">
+            H&amp;I Construction LLC
+          </h1>
+          <p className="text-lg md:text-2xl font-medium text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
+            Providing professional construction services for residential and commercial projects throughout Eastern Washington.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-8 py-4 text-lg shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50"
           >
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm
-              transition-all duration-700 opacity-0 translate-y-8 animate-hero-fade-in-up
-            ">
-              H&amp;I CONSTRUCTION LLC
-            </h1>
-            <p className="text-lg md:text-2xl text-gray-800 text-center mb-8 font-medium transition-all duration-700 opacity-0 translate-y-8 animate-hero-fade-in-up delay-150">
-              Providing professional construction services for residential and commercial projects throughout Eastern Washington.
-            </p>
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-md transition
-                transform hover:scale-105 hover:shadow-2xl focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50
-                animate-hero-fade-in-up delay-300"
-            >
-              <Link href="/contact">
-                Get Your Free Estimate
-              </Link>
-            </Button>
-          </div>
+            <Link href="/contact">
+              Get Your Free Estimate
+            </Link>
+          </Button>
         </div>
-        {/* Animations */}
-        <style jsx global>{`
-          @keyframes fade-in-up {
-            0% {
-              opacity: 0;
-              transform: translateY(32px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-fade-in-up {
-            animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-          }
-          .animate-hero-fade-in-up {
-            animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-          }
-          .delay-150 {
-            animation-delay: 0.15s;
-          }
-          .delay-300 {
-            animation-delay: 0.3s;
-          }
-        `}</style>
       </section>
-      {/* --- End Enhanced Hero Section --- */}
+      {/* --- End Refactored Hero Section --- */}
 
       {/* Our Construction Services - navy background, white text */}
       <section className="py-16 md:py-24 bg-[#113065]">
