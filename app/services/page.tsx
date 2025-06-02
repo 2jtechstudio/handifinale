@@ -77,7 +77,7 @@ export default function ServicesPage() {
           {/* --- New Social Media Projects Section --- */}
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-[#113065] mb-8">
-              Stay up to date on our current projects shared on our social media pages
+              Stay up to date on our current projects shared on our social media pages below:
             </h2>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
               {/* Instagram Tile */}
@@ -85,15 +85,19 @@ export default function ServicesPage() {
                 href="https://www.instagram.com/handiconstructionllc/?fbclid=IwY2xjawKQiCtleHRuA2FlbQIxMABicmlkETFRb1JybkNYNHJpZ3lYM1Z0AR6Uf7dv-Gc2d0nx1YzdpgHnntd5IlLQduQY4StXl7MpU8nq5HwJ9NE6dlsoLA_aem_mboCjA-vi_SI_0rkZ_Ob-w"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs"
+                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs flex flex-col items-center"
               >
-                <div className="relative h-80 w-full">
+                <div className="relative w-full flex justify-center items-center py-6">
                   <Image
                     src="/images/insta.png"
                     alt="Instagram"
-                    fill
-                    className="object-cover"
+                    width={120}
+                    height={120}
+                    className="object-contain"
                   />
+                </div>
+                <div className="pb-6">
+                  <span className="block text-center text-[#113065] font-semibold text-lg">Instagram Page</span>
                 </div>
               </a>
               {/* Facebook Tile */}
@@ -101,15 +105,19 @@ export default function ServicesPage() {
                 href="https://www.facebook.com/profile.php?id=100063801343662"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs"
+                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs flex flex-col items-center"
               >
-                <div className="relative h-80 w-full">
+                <div className="relative w-full flex justify-center items-center py-6">
                   <Image
                     src="/images/facebook.png"
                     alt="Facebook"
-                    fill
-                    className="object-cover"
+                    width={120}
+                    height={120}
+                    className="object-contain"
                   />
+                </div>
+                <div className="pb-6">
+                  <span className="block text-center text-[#113065] font-semibold text-lg">Facebook Page</span>
                 </div>
               </a>
             </div>

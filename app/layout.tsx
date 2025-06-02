@@ -19,7 +19,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
         <Header />
-        <main className="flex min-h-screen flex-col pt-16">
+        {/* Remove pt-16 from main to avoid extra space under sticky nav */}
+        <main className="flex min-h-screen flex-col">
           {children}
         </main>
         <Footer />

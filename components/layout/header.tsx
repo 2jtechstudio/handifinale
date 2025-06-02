@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { COMPANY_PHONE } from "@/lib/constants";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
@@ -15,6 +14,9 @@ const navItems = [
 	{ label: "About", path: "/about" },
 	{ label: "Contact", path: "/contact" },
 ];
+
+// Replace COMPANY_PHONE with the correct number directly in the header
+const NAV_PHONE = "(509) 591-1632";
 
 export function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -77,11 +79,11 @@ export function Header() {
 				{/* Phone Number - Desktop */}
 				<div className="hidden md:flex items-center ml-6">
 					<a
-						href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, "")}`}
+						href="tel:5095911632"
 						className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#aad6ec] transition-colors"
 					>
 						<Phone className="h-5 w-5" />
-						<span>{COMPANY_PHONE}</span>
+						<span>{NAV_PHONE}</span>
 					</a>
 				</div>
 
@@ -127,11 +129,11 @@ export function Header() {
 						</Link>
 					</Button>
 					<a
-						href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, "")}`}
+						href="tel:5095911632"
 						className="mt-8 flex items-center gap-2 text-white hover:text-[#aad6ec] text-lg"
 					>
 						<Phone className="h-6 w-6" />
-						<span>{COMPANY_PHONE}</span>
+						<span>{NAV_PHONE}</span>
 					</a>
 				</div>
 			)}

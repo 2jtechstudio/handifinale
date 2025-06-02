@@ -50,23 +50,59 @@ export default function Home() {
           className="object-cover object-center z-0"
           priority
         />
-        {/* Navy overlay, half as transparent */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/40 via-[#113065]/20 to-[#113065]/10 z-10" />
+        {/* Subtle navy overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/60 via-[#113065]/30 to-[#113065]/10 z-10 pointer-events-none" />
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in border border-gray-100">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm">
+          <div
+            className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center border border-gray-100
+              animate-fade-in-up"
+          >
+            <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm
+              transition-all duration-700 opacity-0 translate-y-8 animate-hero-fade-in-up
+            ">
               H&amp;I CONSTRUCTION LLC
             </h1>
-            <p className="text-lg md:text-2xl text-gray-800 text-center mb-8 font-medium">
+            <p className="text-lg md:text-2xl text-gray-800 text-center mb-8 font-medium transition-all duration-700 opacity-0 translate-y-8 animate-hero-fade-in-up delay-150">
               Providing professional construction services for residential and commercial projects throughout Eastern Washington.
             </p>
-            <Button asChild size="lg" className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-md transition">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-md transition
+                transform hover:scale-105 hover:shadow-2xl focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50
+                animate-hero-fade-in-up delay-300"
+            >
               <Link href="/contact">
                 Get Your Free Estimate
               </Link>
             </Button>
           </div>
         </div>
+        {/* Animations */}
+        <style jsx global>{`
+          @keyframes fade-in-up {
+            0% {
+              opacity: 0;
+              transform: translateY(32px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fade-in-up {
+            animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+          .animate-hero-fade-in-up {
+            animation: fade-in-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+          .delay-150 {
+            animation-delay: 0.15s;
+          }
+          .delay-300 {
+            animation-delay: 0.3s;
+          }
+        `}</style>
       </section>
       {/* --- End Enhanced Hero Section --- */}
 
@@ -126,12 +162,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose H & I Construction - navy background, white text */}
-      <section className="py-16 md:py-24 bg-[#113065] text-white">
+      {/* Why Choose H & I Construction - white background, navy text */}
+      <section className="py-16 md:py-24 bg-white text-[#113065]">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#113065] mb-6">
                 Why Choose H & I Construction?
               </h2>
               <div className="space-y-4">
@@ -140,8 +176,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Experienced Professionals</h3>
-                    <p className="text-gray-200">Our team brings years of construction experience to every project we undertake.</p>
+                    <h3 className="text-xl font-semibold text-[#113065] mb-2">Experienced Professionals</h3>
+                    <p className="text-gray-700">Our team brings years of construction experience to every project we undertake.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -149,8 +185,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Quality Workmanship</h3>
-                    <p className="text-gray-200">We pride ourselves on delivering high-quality results that stand the test of time.</p>
+                    <h3 className="text-xl font-semibold text-[#113065] mb-2">Quality Workmanship</h3>
+                    <p className="text-gray-700">We pride ourselves on delivering high-quality results that stand the test of time.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -158,8 +194,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Reliable Service</h3>
-                    <p className="text-gray-200">Count on us to complete your project on time and within budget.</p>
+                    <h3 className="text-xl font-semibold text-[#113065] mb-2">Reliable Service</h3>
+                    <p className="text-gray-700">Count on us to complete your project on time and within budget.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -167,8 +203,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Customer Satisfaction</h3>
-                    <p className="text-gray-200">Our success is measured by the satisfaction of our clients and the quality of our work.</p>
+                    <h3 className="text-xl font-semibold text-[#113065] mb-2">Customer Satisfaction</h3>
+                    <p className="text-gray-700">Our success is measured by the satisfaction of our clients and the quality of our work.</p>
                   </div>
                 </div>
               </div>
@@ -187,17 +223,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Change this section to white background */}
-      <section className="py-16 md:py-24 bg-white text-[#113065]">
+      {/* Quality Construction Services in Eastern Washington - navy background, light blue button */}
+      <section className="py-16 md:py-24 bg-[#113065] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Quality Construction Services in Eastern Washington
             </h2>
-            <p className="text-xl mb-8 text-[#113065]">
+            <p className="text-xl mb-8 text-white">
               With years of experience and a commitment to quality, we're the trusted choice for construction projects throughout the Tri-Cities area.
             </p>
-            <Button asChild size="lg" className="bg-[#113065] text-white hover:bg-[#0f1056] rounded-xl text-lg">
+            <Button asChild size="lg" className="bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065] rounded-xl text-lg">
               <Link href="/contact">
                 Get Your Free Estimate
               </Link>
