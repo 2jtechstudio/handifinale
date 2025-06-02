@@ -56,23 +56,28 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/30 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
           <h1
-            className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 drop-shadow-lg text-white opacity-0 translate-y-8 animate-hero-fade-in"
+            className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-10 drop-shadow-lg text-white opacity-0 translate-y-8 animate-hero-fade-in"
             style={{ letterSpacing: "0.04em" }}
           >
             H&amp;I CONSTRUCTION LLC
           </h1>
-          <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-white mb-8 mt-6 drop-shadow opacity-0 translate-y-8 animate-hero-fade-in delay-150">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-medium text-white mb-16 mt-0 drop-shadow opacity-0 translate-y-8 animate-hero-fade-in delay-150 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             Providing professional construction services for residential and commercial projects throughout Eastern Washington.
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-6 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 mt-8 opacity-0 translate-y-8 animate-hero-fade-in delay-300"
-          >
-            <Link href="/contact">
-              Get Your Free Estimate
-            </Link>
-          </Button>
+          <div className="flex-1 flex flex-col justify-end w-full">
+            <div className="flex justify-center w-full">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-10 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 mx-auto"
+                style={{ minHeight: "4.5rem" }}
+              >
+                <Link href="/contact">
+                  Get Your Free Estimate
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
         <style jsx global>{`
           @keyframes hero-fade-in {
