@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      {/* --- Refactored Hero Section --- */}
+      {/* --- Enhanced Hero Section --- */}
       <section className="relative h-[90vh] min-h-[500px] bg-cover bg-center flex items-center justify-center text-white text-center overflow-hidden">
         <Image
           src="/images/header.png"
@@ -54,25 +54,49 @@ export default function Home() {
         />
         {/* Navy overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/30 z-10" />
-        <div className="relative z-20 flex flex-col items-center justify-center w-full px-4">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg text-white">
-            H&amp;I Construction LLC
+        <div className="relative z-20 flex flex-col items-center justify-center w-full h-full">
+          <h1
+            className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight mb-6 drop-shadow-lg text-white opacity-0 translate-y-8 animate-hero-fade-in"
+            style={{ letterSpacing: "0.04em" }}
+          >
+            H&amp;I CONSTRUCTION LLC
           </h1>
-          <p className="text-lg md:text-2xl font-medium text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-white mb-10 drop-shadow opacity-0 translate-y-8 animate-hero-fade-in delay-150">
             Providing professional construction services for residential and commercial projects throughout Eastern Washington.
           </p>
           <Button
             asChild
             size="lg"
-            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-8 py-4 text-lg shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50"
+            className="bg-[#aad6ec] text-[#113065] font-bold rounded-xl px-10 py-5 text-xl shadow-lg transition-all duration-200 hover:bg-white hover:text-[#0B1E4A] hover:scale-105 focus-visible:ring-4 focus-visible:ring-[#aad6ec] focus-visible:ring-opacity-50 opacity-0 translate-y-8 animate-hero-fade-in delay-300"
           >
             <Link href="/contact">
               Get Your Free Estimate
             </Link>
           </Button>
         </div>
+        <style jsx global>{`
+          @keyframes hero-fade-in {
+            0% {
+              opacity: 0;
+              transform: translateY(32px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-hero-fade-in {
+            animation: hero-fade-in 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+          .delay-150 {
+            animation-delay: 0.15s;
+          }
+          .delay-300 {
+            animation-delay: 0.3s;
+          }
+        `}</style>
       </section>
-      {/* --- End Refactored Hero Section --- */}
+      {/* --- End Enhanced Hero Section --- */}
 
       {/* Our Construction Services - navy background, white text */}
       <section className="py-16 md:py-24 bg-[#113065]">
