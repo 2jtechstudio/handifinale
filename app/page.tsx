@@ -126,25 +126,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quality Construction Services - white background, navy text */}
-      <section className="py-16 md:py-24 bg-white text-[#113065]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Quality Construction Services in Eastern Washington
-            </h2>
-            <p className="text-xl mb-8 text-[#113065]">
-              With years of experience and a commitment to quality, we're the trusted choice for construction projects throughout the Tri-Cities area.
-            </p>
-            <Button asChild size="lg" className="bg-[#113065] text-white hover:bg-[#0f1056] rounded-xl text-lg">
-              <Link href="/contact">
-                Get Your Free Estimate
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose H & I Construction - navy background, white text */}
       <section className="py-16 md:py-24 bg-[#113065] text-white">
         <div className="container mx-auto px-4">
@@ -202,6 +183,25 @@ export default function Home() {
                 priority
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Change this section to white background */}
+      <section className="py-16 md:py-24 bg-white text-[#113065]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Quality Construction Services in Eastern Washington
+            </h2>
+            <p className="text-xl mb-8 text-[#113065]">
+              With years of experience and a commitment to quality, we're the trusted choice for construction projects throughout the Tri-Cities area.
+            </p>
+            <Button asChild size="lg" className="bg-[#113065] text-white hover:bg-[#0f1056] rounded-xl text-lg">
+              <Link href="/contact">
+                Get Your Free Estimate
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -1,0 +1,7 @@
+```css
+body {
+  @apply bg-background text-foreground;
+  margin: 0; /* Remove default browser margin */
+  padding: 0; /* Remove default browser padding */
+}
+```

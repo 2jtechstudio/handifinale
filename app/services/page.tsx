@@ -3,6 +3,7 @@ import { ServiceDetail } from "@/components/layout/service-detail";
 import { SERVICES } from "@/lib/constants";
 import { constructMetadata } from "@/lib/metadata";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 
 export const metadata = constructMetadata({
   title: "Our Services | H & I Construction LLC",
@@ -73,6 +74,47 @@ export default function ServicesPage() {
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
+          {/* --- New Social Media Projects Section --- */}
+          <div className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-[#113065] mb-8">
+              Stay up to date on our current projects shared on our social media pages
+            </h2>
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+              {/* Instagram Tile */}
+              <a
+                href="https://www.instagram.com/handiconstructionllc/?fbclid=IwY2xjawKQiCtleHRuA2FlbQIxMABicmlkETFRb1JybkNYNHJpZ3lYM1Z0AR6Uf7dv-Gc2d0nx1YzdpgHnntd5IlLQduQY4StXl7MpU8nq5HwJ9NE6dlsoLA_aem_mboCjA-vi_SI_0rkZ_Ob-w"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs"
+              >
+                <div className="relative h-80 w-full">
+                  <Image
+                    src="/images/insta.png"
+                    alt="Instagram"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </a>
+              {/* Facebook Tile */}
+              <a
+                href="https://www.facebook.com/profile.php?id=100063801343662"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl w-full max-w-xs"
+              >
+                <div className="relative h-80 w-full">
+                  <Image
+                    src="/images/facebook.png"
+                    alt="Facebook"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          {/* --- End Social Media Projects Section --- */}
           <div className="flex flex-col gap-4 items-center">
             <div className="flex flex-wrap gap-4 justify-center">
               {firstRow.map((service) => (
