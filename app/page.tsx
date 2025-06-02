@@ -1,3 +1,5 @@
+'use client';
+
 import { Hero } from "@/components/ui/hero";
 import { SERVICES as ORIGINAL_SERVICES } from "@/lib/constants";
 import Link from "next/link";
