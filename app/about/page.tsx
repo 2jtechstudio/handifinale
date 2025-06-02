@@ -79,13 +79,14 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Tile 1 */}
-            <div className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-              <div className="relative h-56 w-full">
+            <div className="flex flex-col items-center group transition-transform duration-300 hover:scale-105">
+              <div className="relative h-56 w-full flex items-center justify-center">
                 <Image
                   src="/images/basketball.png"
                   alt="Mid Columbia Hoops Basketball Tournament Sponsorship"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  style={{ position: "absolute" }}
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col items-center justify-center">
@@ -105,13 +106,14 @@ export default function AboutPage() {
               </div>
             </div>
             {/* Tile 2 */}
-            <div className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-              <div className="relative h-56 w-full">
+            <div className="flex flex-col items-center group transition-transform duration-300 hover:scale-105">
+              <div className="relative h-56 w-full flex items-center justify-center">
                 <Image
                   src="/images/baseball.png"
                   alt="Benton City Little League Baseball Field Renovation"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  style={{ position: "absolute" }}
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col items-center justify-center">
@@ -131,13 +133,14 @@ export default function AboutPage() {
               </div>
             </div>
             {/* Tile 3 */}
-            <div className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-              <div className="relative h-56 w-full">
+            <div className="flex flex-col items-center group transition-transform duration-300 hover:scale-105">
+              <div className="relative h-56 w-full flex items-center justify-center">
                 <Image
                   src="/images/kionagrass.jpg"
                   alt="Kiona Benton High School Baseball Field"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  style={{ position: "absolute" }}
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col items-center justify-center">
