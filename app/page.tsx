@@ -47,10 +47,11 @@ export default function Home() {
           src="/images/header.png"
           alt="Construction site aerial view"
           fill
-          className="object-cover object-center z-0 opacity-20"
+          className="object-cover object-center z-0"
           priority
         />
-        {/* Remove navy overlay */}
+        {/* Navy overlay, half as transparent */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/40 via-[#113065]/20 to-[#113065]/10 z-10" />
         <div className="relative z-20 w-full flex justify-center">
           <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in border border-gray-100">
             <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm">
@@ -69,13 +70,14 @@ export default function Home() {
       </section>
       {/* --- End Enhanced Hero Section --- */}
 
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* Our Construction Services - navy background, white text */}
+      <section className="py-16 md:py-24 bg-[#113065]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               OUR CONSTRUCTION SERVICES
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-200 max-w-2xl mx-auto">
               From excavation to foundation work, we provide comprehensive construction services to meet all your project needs.
             </p>
           </div>
@@ -83,7 +85,6 @@ export default function Home() {
             {SERVICES.map((service) => {
               let imageSrc = imageMap[service.title];
               if (!imageSrc) {
-                // fallback: try lowercased, spaces and special chars removed, .png
                 const fallback = `/images/${service.title.toLowerCase().replace(/[\s/&]+/g, "")}1.png`;
                 imageSrc = fallback;
               }
@@ -115,7 +116,7 @@ export default function Home() {
             })}
           </div>
           <div className="text-center mt-12">
-            <Button asChild className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl">
+            <Button asChild className="bg-white hover:bg-[#aad6ec] text-[#113065] rounded-xl">
               <Link href="/services">
                 View All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -125,16 +126,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#113065] text-white">
+      {/* Quality Construction Services - white background, navy text */}
+      <section className="py-16 md:py-24 bg-white text-[#113065]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Quality Construction Services in Eastern Washington
             </h2>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-[#113065]">
               With years of experience and a commitment to quality, we're the trusted choice for construction projects throughout the Tri-Cities area.
             </p>
-            <Button asChild size="lg" className="bg-[#aad6ec] text-[#113065] hover:bg-white hover:text-[#113065] rounded-xl text-lg">
+            <Button asChild size="lg" className="bg-[#113065] text-white hover:bg-[#0f1056] rounded-xl text-lg">
               <Link href="/contact">
                 Get Your Free Estimate
               </Link>
@@ -143,11 +145,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      {/* Why Choose H & I Construction - navy background, white text */}
+      <section className="py-16 md:py-24 bg-[#113065] text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose H & I Construction?
               </h2>
               <div className="space-y-4">
@@ -156,8 +159,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Experienced Professionals</h3>
-                    <p className="text-gray-600">Our team brings years of construction experience to every project we undertake.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Experienced Professionals</h3>
+                    <p className="text-gray-200">Our team brings years of construction experience to every project we undertake.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -165,8 +168,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Workmanship</h3>
-                    <p className="text-gray-600">We pride ourselves on delivering high-quality results that stand the test of time.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Quality Workmanship</h3>
+                    <p className="text-gray-200">We pride ourselves on delivering high-quality results that stand the test of time.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -174,8 +177,8 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Reliable Service</h3>
-                    <p className="text-gray-600">Count on us to complete your project on time and within budget.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Reliable Service</h3>
+                    <p className="text-gray-200">Count on us to complete your project on time and within budget.</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -183,15 +186,15 @@ export default function Home() {
                     <span className="text-[#113065] font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Customer Satisfaction</h3>
-                    <p className="text-gray-600">Our success is measured by the satisfaction of our clients and the quality of our work.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Customer Satisfaction</h3>
+                    <p className="text-gray-200">Our success is measured by the satisfaction of our clients and the quality of our work.</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 shadow-xl">
               <Image
-                src="/whychooseus.jpeg" // Change to .jpg or .png if that's the actual file
+                src="/whychooseus.jpeg"
                 alt="Why choose us image"
                 fill
                 className="w-full h-full object-cover"
