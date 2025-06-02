@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { COMPANY_YEAR_FOUNDED, COMPANY_INSTAGRAM, COMPANY_FACEBOOK, SERVICE_AREAS } from "@/lib/constants";
+import { COMPANY_YEAR_FOUNDED, COMPANY_INSTAGRAM, COMPANY_FACEBOOK } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
@@ -123,29 +123,81 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      {/* Replace "Our Service Areas" with "Built on Community" section */}
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Service Areas
+              Built on Community
             </h2>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              We proudly serve the following communities in Eastern Washington:
+              We’re proud to support and give back to the communities we serve.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {SERVICE_AREAS.map((area) => (
-              <div 
-                key={area}
-                className="bg-gray-50 p-4 rounded-xl border border-gray-200 flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#113065] mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="text-gray-700 font-medium">{area}</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Tile 1 */}
+            <a
+              href="https://www.facebook.com/share/p/1Ys5Kmc5Ta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
+            >
+              <div className="relative h-56 w-full">
+                <Image
+                  src="/images/basketball.png"
+                  alt="Mid Columbia Hoops Basketball Tournament Sponsorship"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
+              <div className="p-6 flex-1 flex items-center justify-center">
+                <h3 className="text-lg font-semibold text-center text-[#113065] group-hover:text-[#0f1056] transition-colors">
+                  Mid Columbia Hoops Basketball Tournament Sponsorship
+                </h3>
+              </div>
+            </a>
+            {/* Tile 2 */}
+            <a
+              href="https://www.facebook.com/share/p/1CFRzAwhaf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
+            >
+              <div className="relative h-56 w-full">
+                <Image
+                  src="/images/baseball.png"
+                  alt="Benton City Little League Baseball Field Renovation"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 flex-1 flex items-center justify-center">
+                <h3 className="text-lg font-semibold text-center text-[#113065] group-hover:text-[#0f1056] transition-colors">
+                  Benton City Little League Baseball Field Renovation
+                </h3>
+              </div>
+            </a>
+            {/* Tile 3 */}
+            <a
+              href="https://www.facebook.com/share/p/16hQkddU8n/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
+            >
+              <div className="relative h-56 w-full">
+                <Image
+                  src="/images/kionagrass.jpg"
+                  alt="Kiona Benton High School Baseball Field"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 flex-1 flex items-center justify-center">
+                <h3 className="text-lg font-semibold text-center text-[#113065] group-hover:text-[#0f1056] transition-colors">
+                  Kiona Benton High School Baseball Field
+                </h3>
+              </div>
+            </a>
           </div>
         </div>
       </section>

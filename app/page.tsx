@@ -52,8 +52,8 @@ export default function Home() {
         />
         {/* Navy overlay, half as transparent */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/40 via-[#113065]/20 to-[#113065]/10 z-10" />
-        <div className="relative z-20 w-full flex justify-center">
-          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in border border-gray-100">
+        <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in border border-gray-100">
             <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm">
               H&amp;I CONSTRUCTION LLC
             </h1>

@@ -31,18 +31,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="relative h-12 w-40 mb-4">
-              <Image 
-                src="/logo.svg" 
-                alt={COMPANY_NAME} 
-                fill
-                className="object-contain brightness-0 invert"
-              />
-            </div>
-            <p className="text-gray-300 max-w-xs">
-              {COMPANY_DESCRIPTION}
-            </p>
-            <div className="flex space-x-4 mt-6">
+            {/* Remove logo image and location text, add Social Media title and icons */}
+            <h3 className="text-lg font-semibold mb-4">Social Media</h3>
+            <div className="flex space-x-4 mt-2">
               <a 
                 href={COMPANY_INSTAGRAM} 
                 target="_blank" 
@@ -161,10 +152,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <h3 className="text-lg font-semibold mb-2">Location</h3>
-          <p>
-            Serving Tri-Cities, Walla Walla, Yakima, Grandview, Prosser & Sunnyside, WA with quality construction services.
-          </p>
+          {/* Remove Location title and location text */}
           <p className="mt-4 text-gray-400">
             &copy; {currentYear} {COMPANY_NAME}. Serving the Tri-Cities area since {COMPANY_YEAR_FOUNDED}. All rights reserved.
           </p>
