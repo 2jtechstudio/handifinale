@@ -42,22 +42,21 @@ export default function Home() {
   return (
     <>
       {/* --- Enhanced Hero Section --- */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-[#0f1a2c] overflow-hidden">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-white overflow-hidden">
         <Image
           src="/images/header.png"
           alt="Construction site aerial view"
           fill
-          className="object-cover object-center z-0"
+          className="object-cover object-center z-0 opacity-20"
           priority
         />
-        {/* Navy overlay for better UX */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/40 z-10" />
+        {/* Remove navy overlay */}
         <div className="relative z-20 w-full flex justify-center">
-          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white/90 rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in">
+          <div className="max-w-2xl w-full mx-4 md:mx-0 bg-white rounded-2xl shadow-xl px-8 py-10 md:py-14 flex flex-col items-center animate-fade-in border border-gray-100">
             <h1 className="text-3xl md:text-5xl font-extrabold text-[#113065] text-center mb-4 tracking-tight drop-shadow-sm">
               H&amp;I CONSTRUCTION LLC
             </h1>
-            <p className="text-lg md:text-2xl text-gray-700 text-center mb-8 font-medium">
+            <p className="text-lg md:text-2xl text-gray-800 text-center mb-8 font-medium">
               Providing professional construction services for residential and commercial projects throughout Eastern Washington.
             </p>
             <Button asChild size="lg" className="bg-[#113065] hover:bg-[#0f1056] text-white rounded-xl px-8 py-4 text-lg font-semibold shadow-md transition">
