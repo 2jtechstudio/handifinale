@@ -6,6 +6,7 @@ import {
   COMPANY_ADDRESS,
   GOOGLE_MAPS_EMBED_URL
 } from "@/lib/constants";
+import Image from "next/image";
 
 export const metadata = constructMetadata({
   title: "Contact Us | H & I Construction LLC",
@@ -87,17 +88,14 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-md">
-                <iframe
-                  src={GOOGLE_MAPS_EMBED_URL}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="H & I Construction Location"
-                ></iframe>
+              <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/handilogo2.png"
+                  alt="H&I Construction Map/Logo"
+                  fill
+                  className="object-contain object-center bg-white"
+                  priority
+                />
               </div>
             </div>
             

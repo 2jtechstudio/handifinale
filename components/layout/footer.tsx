@@ -26,7 +26,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-white text-[#113065]">
+    <footer className="bg-[#113065] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -39,7 +39,7 @@ export function Footer() {
                 className="object-contain brightness-0 invert"
               />
             </div>
-            <p className="text-gray-600 max-w-xs">
+            <p className="text-gray-300 max-w-xs">
               {COMPANY_DESCRIPTION}
             </p>
             <div className="flex space-x-4 mt-6">
@@ -47,7 +47,7 @@ export function Footer() {
                 href={COMPANY_INSTAGRAM} 
                 target="_blank" 
                 rel="noreferrer"
-                className="text-[#113065] hover:text-[#aad6ec] transition-colors"
+                className="text-white hover:text-[#aad6ec] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-6 w-6" />
@@ -56,7 +56,7 @@ export function Footer() {
                 href={COMPANY_FACEBOOK} 
                 target="_blank" 
                 rel="noreferrer"
-                className="text-[#113065] hover:text-[#aad6ec] transition-colors"
+                className="text-white hover:text-[#aad6ec] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-6 w-6" />
@@ -71,7 +71,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="/"
-                  className="text-gray-600 hover:text-[#113065] transition-colors flex items-center"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors flex items-center"
                 >
                   <ArrowRight className="h-4 w-4 mr-2" />
                   Home
@@ -80,7 +80,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="/services"
-                  className="text-gray-600 hover:text-[#113065] transition-colors flex items-center"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors flex items-center"
                 >
                   <ArrowRight className="h-4 w-4 mr-2" />
                   Services
@@ -89,7 +89,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="/about"
-                  className="text-gray-600 hover:text-[#113065] transition-colors flex items-center"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors flex items-center"
                 >
                   <ArrowRight className="h-4 w-4 mr-2" />
                   About Us
@@ -98,7 +98,7 @@ export function Footer() {
               <li>
                 <Link 
                   href="/contact"
-                  className="text-gray-600 hover:text-[#113065] transition-colors flex items-center"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors flex items-center"
                 >
                   <ArrowRight className="h-4 w-4 mr-2" />
                   Contact
@@ -113,7 +113,7 @@ export function Footer() {
             <ul className="space-y-2">
               {SERVICE_AREAS.map((area) => (
                 <li key={area}>
-                  <span className="text-gray-600 flex items-center">
+                  <span className="text-gray-300 flex items-center">
                     <MapPin className="h-4 w-4 mr-2" />
                     {area}
                   </span>
@@ -128,13 +128,13 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 mt-0.5 text-[#aad6ec]" />
-                <span className="text-gray-600">{COMPANY_ADDRESS}</span>
+                <span className="text-gray-300">{COMPANY_ADDRESS}</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-[#aad6ec]" />
                 <a 
                   href={`tel:${COMPANY_PHONE.replace(/[^0-9]/g, '')}`}
-                  className="text-gray-600 hover:text-[#113065] transition-colors"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors"
                 >
                   {COMPANY_PHONE}
                 </a>
@@ -143,7 +143,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 mr-3 text-[#aad6ec]" />
                 <a 
                   href={`mailto:${COMPANY_EMAIL}`}
-                  className="text-gray-600 hover:text-[#113065] transition-colors"
+                  className="text-gray-300 hover:text-[#aad6ec] transition-colors"
                 >
                   {COMPANY_EMAIL}
                 </a>
@@ -151,7 +151,7 @@ export function Footer() {
             </ul>
             <Button 
               asChild
-              className="mt-6 bg-[#113065] text-white hover:bg-[#aad6ec] rounded-xl"
+              className="mt-6 bg-[#aad6ec] text-[#113065] hover:bg-[#113065] hover:text-white rounded-xl"
             >
               <Link href="/contact">
                 Get a Free Estimate
@@ -160,8 +160,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-400">
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
+          <h3 className="text-lg font-semibold mb-2">Location</h3>
           <p>
+            Serving Tri-Cities, Walla Walla, Yakima, Grandview, Prosser & Sunnyside, WA with quality construction services.
+          </p>
+          <p className="mt-4 text-gray-400">
             &copy; {currentYear} {COMPANY_NAME}. Serving the Tri-Cities area since {COMPANY_YEAR_FOUNDED}. All rights reserved.
           </p>
         </div>
