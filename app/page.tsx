@@ -55,10 +55,10 @@ export default function Home() {
         {/* Navy overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#113065]/80 via-[#113065]/60 to-[#113065]/30 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center w-full h-full px-4 sm:px-6 md:px-8">
-          <h1 className="uppercase font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white drop-shadow-lg mb-0 break-words whitespace-normal">
+          <h1 className="uppercase font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white drop-shadow-lg mb-0">
             H&amp;I CONSTRUCTION LLC
           </h1>
-          <p className="max-w-xs sm:max-w-md md:max-w-xl text-xl sm:text-2xl md:text-3xl font-medium text-white mt-6 mb-0 drop-shadow break-words whitespace-normal">
+          <p className="max-w-md sm:max-w-lg md:max-w-xl text-lg sm:text-xl md:text-2xl font-medium text-white mt-6 mb-0 drop-shadow">
             Providing professional construction services for residential and commercial projects throughout Eastern Washington.
           </p>
           <div className="flex-1 flex flex-col justify-end w-full">
